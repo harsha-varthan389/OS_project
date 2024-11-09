@@ -1,4 +1,5 @@
 import 'package:e_commerce/utils/constants/colors.dart';
+import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
@@ -32,7 +33,7 @@ class TVerticalImageText extends StatelessWidget {
               borderRadius: BorderRadius.circular(100),
               ),
               child: Center(
-                child: Image(image: AssetImage(image),fit: BoxFit.cover,color:dark ? TColors.light : TColors.dark),
+                child: Image(image: const AssetImage(TImages.sportIcon),fit: BoxFit.cover,color:dark ? TColors.light : TColors.dark),
                 ),
             ),
             const SizedBox(height: TSizes.spaceBtwItems/2),

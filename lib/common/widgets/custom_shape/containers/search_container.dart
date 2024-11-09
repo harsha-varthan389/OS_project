@@ -2,7 +2,6 @@ import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/device/device_utility.dart';
 import 'package:e_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -22,7 +21,7 @@ class TSearchContainer extends StatelessWidget {
     final dark = THelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: OnTap,
+      onTap: onTap,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
         child: Container(
