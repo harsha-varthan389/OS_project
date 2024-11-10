@@ -1,14 +1,18 @@
 //import
 
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_commerce/common/widgets/custom_shape/containers/primary_header_container.dart';
 import 'package:e_commerce/common/widgets/custom_shape/containers/search_container.dart';
+import 'package:e_commerce/common/widgets/images/t_rounded_images.dart';
 import 'package:e_commerce/common/widgets/texts/section_heading.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 
 class HomeScreen extends StatelessWidget{
@@ -47,9 +51,15 @@ class HomeScreen extends StatelessWidget{
             ),
 
             //Body
-            Container(
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(TSizes.md)),
-              child: const Image(image: AssetImage(TImages.promoBanner1),),
+            Padding(
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: CarouselSlider(
+                options: CarouselOptions(
+                  viewportFraction: 0.8
+                ),
+                items: [
+                  TRoundedImage(imageUrl: TImages.promoBanner3),
+                ],)
             )
           ],
         ),
@@ -57,4 +67,5 @@ class HomeScreen extends StatelessWidget{
     );
   }
 }
+
 
